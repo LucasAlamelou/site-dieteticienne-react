@@ -13,7 +13,7 @@ Le projet était un évaluation en cours de formation ayant pour but de réalise
 
 ### `Le lien d'hébergement`
 
-[http://localhost:3000](http://localhost:3000) <br>
+[https://site-dieteticienne.herokuapp.com](https://site-dieteticienne.herokuapp.com) <br>
 
 ### `Note`
 
