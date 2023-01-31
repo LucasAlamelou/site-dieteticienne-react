@@ -47,7 +47,6 @@
     }
      .MainDivSection1, .MainDivSection2 {
         width: 100vw;
-        height: 45vh;
     }
     .MainDiv1 {
         flex-direction: column-reverse;
@@ -59,5 +58,8 @@
     .Image {
         width: 100vw;
         height: 400px;
+    }
+    .MainDivSection2Interieur{
+        margin-bottom: 30px;
     }
 }
