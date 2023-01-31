@@ -1,13 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;800&family=Noto+Sans+JP:wght@500&family=Reenie+Beanie&display=swap');
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  /*font-family: 'Baloo Bhai 2', cursive;*/
+  font-family: 'Noto Sans JP', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+ul {
+  list-style: none;
+}
+
+.lien {
+  font-family: 'Baloo Bhai 2', cursive;
+  font-weight: 700;
+  margin-left: 30%;
+}
+
+.mention-legal {
+  background-color: #DC9A7D;
+  color: #FFFF;
+}
+
+.title {
+  width: 100%;
+  margin-left: 50%;
+  transform: translateX(-20%);
+  padding: 40px;
+}
+
+.article {
+  padding: 40px;
+}
+
+.img-recette {
+  width: 100%;
+  height: 600px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+label {
+  font-family: 'Baloo Bhai 2', cursive;
+  font-weight: 700;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
+  .title {
+    width: 80%;
+    margin-left: 10%;
+    transform: translateX(0%);
+    padding: 40px;
+  }
+  .img-recette {
+    width: 100%;
+    height: 400px;
+  }
 }

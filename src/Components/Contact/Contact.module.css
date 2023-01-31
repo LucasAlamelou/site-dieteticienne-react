@@ -1,0 +1,56 @@
+.FormContact {
+    display: grid;
+    grid-template-columns: 100%;
+    margin-left: 0%;
+    background-color: #DC9A7D;
+    width: 100%;
+}
+.DivInput{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 15%;
+    width: 70%;
+}
+.DivInput > input {
+    border-radius: 10px;
+    border: none;
+}
+.DivInputSpe{
+    height: 100px;
+}
+.button{
+    font-family: 'Baloo Bhai 2', cursive;
+    font-weight: 700;
+    border-radius: 10px;
+    width: 50%;
+    margin-left: 25%;
+    border: none;
+}
+.ContactImg{
+    display: none;
+}
+@media only screen and (min-device-width : 768px) {
+    .FormContact {
+        display: grid;
+        grid-template-columns: 50%;
+        margin-left: 0%;
+        background-color: #DC9A7D;
+        width: 50vw;
+    }
+    .DivInput{
+        margin-left: 55%;
+        width: 70%;
+    }
+    .contact{
+        display: flex;
+        flex-direction: row;
+    }
+    .ContactImg{
+        display: inline;
+        width: 50vw;
+        height: 80vh;
+       
+    }
+}

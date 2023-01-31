@@ -1,0 +1,38 @@
+.Underline {
+    text-decoration: underline;
+}
+
+.Footer {
+    font-family: 'Baloo Bhai 2', cursive;
+    background-color: #609A7D;
+}
+
+.FooterCoordonees {
+    margin-left: 100px;
+}
+.FooterCoordoneesP {
+    margin: 0 0;
+}
+
+.FooterMention {
+    width: 400px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
+    .FooterMention {
+        width: 60vw;
+       margin-left: 55%;
+    }
+    .Footer {
+        padding: 20px;
+    }
+    .FooterCoordonees {
+        margin-left: 0px;
+    }
+    .FooterCoordoneesP {
+        margin: 0 0;
+        margin-top: 10px;
+    }
+}

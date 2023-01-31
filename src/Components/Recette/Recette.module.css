@@ -1,0 +1,290 @@
+.DivGlobal {
+    display: flex;
+    flex-direction: row;
+    left: 0px;
+}
+
+.DivFilter {
+    left: 0px;
+    top: 0px;
+}
+
+.DivRecettes {
+    height: max-content;
+    width: 80vw;
+    left: 324px;
+    top: 0px;
+    overflow-y: scroll;
+    background: #BDB9B3;
+}
+.DivRecette {
+    margin-top: 20px;
+    width: 80%; 
+    height: max-content;
+    margin: 0px auto 50px; 
+    background-color: white; 
+    box-shadow: 5px 5px 20px #999; 
+    
+}
+
+.FormAddOrModifyRecette {
+    display: grid;
+    grid-template-columns: 50%;
+    background-color: #DC9A7D;
+    width: 100%;
+}
+
+.DivInput{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 60%;
+    width: 70%;
+}
+
+.DivInput > input {
+    border-radius: 10px;
+    border: none;
+}
+
+.DivInputSpe{
+    height: 100px;
+}
+
+.button{
+    font-family: 'Baloo Bhai 2', cursive;
+    font-weight: 700;
+    border-radius: 10px;
+    width: 50%;
+    margin-left: 25%;
+    border: none;
+}
+
+.note {
+    display: flex;
+    color: yellow;
+    justify-content: center;
+    margin-right: 20%;
+    align-items: center;
+
+}
+
+h3 {
+    margin-left: 5%;
+    font-size: 150%;
+    text-decoration: underline;
+}
+
+h4 {
+    text-decoration: underline;
+}
+
+.ButtonToggle {
+    display: none;
+}
+
+.FilterTitle {
+    display: flex;
+}
+
+.LinkAdd, .LinkModify {
+    padding: 10px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.inputNote > button {
+    border: none;
+    padding: 5px;
+    color: rgb(253, 199, 3);
+    background-color: #FFFF;
+}
+
+.LinkModify {
+    font-family: 'Baloo Bhai 2', cursive;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.ImageRecette{
+    width: 100vw;
+    height: 600px;
+}
+
+.optionFilter {
+    width: 20vw;
+}
+
+.ElementDescription{
+    width: 150px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+}
+
+.ContactImg {
+    display: inline;
+     width: 50vw;
+    height: 100%;
+}
+
+.title {
+    color:#DC9A7D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ElementDescription {
+    width: 40%;
+}
+
+.div3Element {
+    display: flex;
+    height: max-content;
+    margin-left: 20px;
+}
+.time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.time > p {
+    padding: 15px;
+}
+
+.ingredient {
+    display: flex;
+    flex-direction: row;
+   
+    margin-left: 20px;
+    height: 30%;
+}
+
+.ingredient > ul {
+    margin-top: 5%;
+    padding: 20px;
+}
+.RecetteRegime {
+    margin-left: 20px;
+}
+.DerniereElementRecette {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
+    .DivGlobal {
+        display: flex;
+        flex-direction: column;
+        left: 0px;
+    }
+    .DivRecette{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 90%;
+        height: 100%;
+        margin-top: 15px;
+    }
+    .DivRecettes {
+        height: max-content;
+        width: 100vw;
+        
+    }
+    .ElementRecette {
+        margin-left: 30px;
+    }
+    .FilterTitle {
+        display: flex;
+        justify-content: space-around;
+    }
+    .optionFilter {
+       animation: openToggle 1s linear ;
+       width: 100%;
+       margin-left: 30%;
+    }
+    @keyframes openToggle {
+        0%, 7% {
+          transform: translateX(-200%);
+        }
+        15% {
+          transform: translateX(-100%);
+        }
+        20% {
+          transform: translateX(-50%);
+        }
+        45% {
+          transform: translateX(-45%);
+        }
+        60% {
+          transform: translateX(-30%);
+        }
+        100% {
+          transform: translateX(0%);
+        }
+      }
+      
+    .ButtonToggle{
+        display: block;
+    }
+    .ImageRecette{
+        width: 100vw;
+        height: 350px;
+    }
+    .FormAddOrModifyRecette {
+        display: grid;
+        grid-template-columns: 100%;
+        margin-left: 0%;
+        background-color: #DC9A7D;
+        width: 100%;
+    }
+    .DivInput{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-left: 15%;
+        width: 70%;
+    }
+    .DivInput > input {
+        border-radius: 10px;
+        border: none;
+    }
+    .DivInputSpe{
+        height: 100px;
+    }
+    .button{
+        font-family: 'Baloo Bhai 2', cursive;
+        font-weight: 700;
+        border-radius: 10px;
+        width: 50%;
+        margin-left: 25%;
+    }
+    .ContactImg {
+        display: none;
+    }
+    .div3Element {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .ElementDescription {
+        width: 100%;
+    }
+    .ingredient {
+        flex-direction: column;
+    }
+    .ingredient > ul {
+        margin-top: 0%;
+        padding: 5px;
+    }
+}
