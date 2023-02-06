@@ -25,6 +25,7 @@ export async function loader({ request }) {
   }
   return null;
 }
+
 const Recettes = () => {
   return (
     <>

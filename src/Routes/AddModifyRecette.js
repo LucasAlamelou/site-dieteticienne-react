@@ -27,6 +27,7 @@ export async function action({ request }) {
   const regime = formData.getAll('regime');
   const steps = formData.get('steps');
   const allergn = formData.getAll('allergn');
+  const isUserOnly = formData.get('isUserOnly');
   const contentFormForAPI = {
     title,
     description,
@@ -37,6 +38,7 @@ export async function action({ request }) {
     regime,
     steps,
     allergn,
+    isUserOnly,
   };
   const contentModify = {
     token,

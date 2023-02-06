@@ -24,6 +24,9 @@ const AddRecette = () => {
   );
   const [allergn, setAllergn] = useState(recetteToModify !== null ? recetteToModify.allergn : []);
   const [regime, setRegime] = useState(recetteToModify !== null ? recetteToModify.regime : []);
+  const [isUser, setIsUser] = useState(
+    recetteToModify !== null ? recetteToModify.isUserOnly : false
+  );
 
   const result = useLoaderData();
   const listAllergn = result[0];
@@ -127,7 +130,7 @@ const AddRecette = () => {
                     name="allergn"
                     onChange={(event) => setAllergn((allergn) => [...allergn, event.target.id])}
                   />
-                  <label for={allergnOnMap._id}>{allergnOnMap.name}</label>
+                  <label htmlFor={allergnOnMap._id}>{allergnOnMap.name}</label>
                 </div>
               ))}
 
@@ -142,13 +145,22 @@ const AddRecette = () => {
                     value={regimeOnMap._id}
                     name="regime"
                     onChange={(event) => {
-                      console.log(event.target.id);
                       setRegime((regime) => [...regime, event.target.id]);
                     }}
                   />
-                  <label for={regimeOnMap._id}>{regimeOnMap.name}</label>
+                  <label htmlFor={regimeOnMap._id}>{regimeOnMap.name}</label>
                 </div>
               ))}
+        </div>
+        <div className={styled.DivInput}>
+          <input
+            type="checkbox"
+            value={isUser}
+            name="isUserOnly"
+            id="isUserOnly"
+            onChange={(event) => setIsUser(!isUser)}
+          />
+          <label htmlFor="isUserOnly">Recette que pour l'utilisateur ?</label>
         </div>
         <div className={styled.DivInput}>
           <button type="submit" className={styled.button}>

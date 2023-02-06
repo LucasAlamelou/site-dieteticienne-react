@@ -1,5 +1,5 @@
 const url = `https://serveur-dieteticienne-ecf.herokuapp.com`;
-// const urlLocal = `http://localhost:3900`;
+const urlD = `http://localhost:3900`;
 
 export const getAllergns = async () => {
   const response = await fetch(`${url}/allergns`)

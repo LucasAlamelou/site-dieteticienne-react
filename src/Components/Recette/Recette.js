@@ -174,46 +174,71 @@ const Recette = () => {
 function Favorite({ recette }) {
   // Communiquer avec les chargeurs sans modifier la navigation
   const fetcher = useFetcher();
+  const [note, setNote] = useState(recette.note);
   // yes, this is a `let` for later
-  let favorite = recette.note;
+  let favorite = note;
   if (fetcher.formData) {
-    favorite = fetcher.formData.get('favorite') === 'true';
+    favorite = fetcher.formData.get(`note-${favorite}`) === 'true';
   }
-
   return (
     <>
       <fetcher.Form method="post" className={styled.inputNote}>
         <input type="hidden" name="noteNumber" value={1} />
         <input type="hidden" name="_id" value={recette._id} />
-        <button name="note" value={favorite >= 1 ? 'true' : 'false'} aria-label={'Notez'}>
+        <button
+          name="note-1"
+          value={favorite >= 1 ? 'true' : 'false'}
+          aria-label={'Notez'}
+          onClick={(e) => setNote(note + 1)}
+        >
           {favorite >= 1 ? '★' : '☆'}
         </button>
       </fetcher.Form>
       <fetcher.Form method="post" className={styled.inputNote}>
         <input type="hidden" name="noteNumber" value={2} />
         <input type="hidden" name="_id" value={recette._id} />
-        <button name="note" value={favorite >= 2 ? 'true' : 'false'} aria-label={'Notez'}>
+        <button
+          name="note-2"
+          value={favorite}
+          aria-label={'Notez'}
+          onClick={(e) => setNote(note + 1)}
+        >
           {favorite >= 2 ? '★' : '☆'}
         </button>
       </fetcher.Form>
       <fetcher.Form method="post" className={styled.inputNote}>
         <input type="hidden" name="noteNumber" value={3} />
         <input type="hidden" name="_id" value={recette._id} />
-        <button name="note" value={favorite >= 3 ? 'true' : 'false'} aria-label={'Notez'}>
+        <button
+          name="note-3"
+          value={favorite}
+          aria-label={'Notez'}
+          onClick={(e) => setNote(note + 1)}
+        >
           {favorite >= 3 ? '★' : '☆'}
         </button>
       </fetcher.Form>
       <fetcher.Form method="post" className={styled.inputNote}>
         <input type="hidden" name="noteNumber" value={4} />
         <input type="hidden" name="_id" value={recette._id} />
-        <button name="note" value={favorite >= 4 ? 'true' : 'false'} aria-label={'Notez'}>
+        <button
+          name="note-4"
+          value={favorite}
+          aria-label={'Notez'}
+          onClick={(e) => setNote(note + 1)}
+        >
           {favorite >= 4 ? '★' : '☆'}
         </button>
       </fetcher.Form>
       <fetcher.Form method="post" className={styled.inputNote}>
         <input type="hidden" name="noteNumber" value={5} />
         <input type="hidden" name="_id" value={recette._id} />
-        <button name="note" value={favorite >= 5 ? 'true' : 'false'} aria-label={'Notez'}>
+        <button
+          name="note-5"
+          value={favorite}
+          aria-label={'Notez'}
+          onClick={(e) => setNote(note + 1)}
+        >
           {favorite >= 5 ? '★' : '☆'}
         </button>
       </fetcher.Form>
@@ -222,7 +247,6 @@ function Favorite({ recette }) {
 }
 
 export const getRecettefilter = (event, recettes) => {
-  console.log(event.target.id);
   const idInput = event.target.id;
   const checked = event.target.checked;
   if (idInput === 'filter10' && checked === true) {
